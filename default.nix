@@ -1,12 +1,20 @@
-{ callPackage, neovim, ... }:
+{ lib, callPackage, neovim, vimUtils, fetchFromGitHub, ... }:
 
-neovim.override {
+with lib;
+
+let
+    builder = vimUtils.buildVimPluginFrom2Nix;
+    build = { owner, repo, rev ? "HEAD", name ? repo, sha256 }: builder {
+        inherit name;
+        src = fetchFromGitHub {
+            fetchSubmodules = true;
+            inherit name owner repo rev sha256;
+        };
+    };
+in neovim.override rec {
     configure = {
-        customRC = ''
-            let g:dein#disabled = 1
-            source ${builtins.getEnv "HOME"}/.config/nvim/init.vim
-        '';
+        customRC = "source ${builtins.getEnv "HOME"}/.config/nvim/init.vim";
 
-        packages.myVimPackage.start = (callPackage ~/.config/nvim/plugins {});
+        packages.myVimPackage.start = imap0 (_: build) (callPackage ./plugins {});
     };
 }

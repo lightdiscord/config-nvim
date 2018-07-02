@@ -1,17 +1,8 @@
-{ lib, vimUtils, fetchFromGitHub, ... }:
+{ lib, ... }:
 
 with lib;
 
-let
-    builder = vimUtils.buildVimPluginFrom2Nix;
-    build = { owner, repo, rev ? "HEAD", name ? repo, sha256 }: builder {
-        inherit name;
-        src = fetchFromGitHub {
-            fetchSubmodules = true;
-            inherit name owner repo rev sha256;
-        };
-    };
-in imap0 (_: build) (flatten [
+(flatten [
     (import ./ale)
     (import ./ctrlp.vim)
     (import ./editorconfig-vim)
