@@ -1,5 +1,9 @@
 " Setup: Dein
-source ~/.config/nvim/dein.vim
+let g:dein#disabled = get(g:, 'dein#disabled', 0)
+
+if !g:dein#disabled
+ source ~/.config/nvim/dein.vim
+endif
 
 " Load: Config
 source ~/.config/nvim/config.vim
