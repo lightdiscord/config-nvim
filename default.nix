@@ -8,6 +8,8 @@ let
         inherit name;
         src = fetchFromGitHub {
             fetchSubmodules = true;
+            leaveDotGit = true;
+            deepClone = true;
             inherit name owner repo rev sha256;
         };
     };
