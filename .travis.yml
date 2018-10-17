@@ -1,13 +1,20 @@
 language: nix
 
 script:
-  - make dist
-  - nix-store --optimize
+  - nix build -f ./scripts/test/minimal.nix -v
+  - nix build -f ./scripts/build.nix -v
+
+before_deploy:
+  - cp -rL result dist
+  - chmod -R u+w dist
 
 deploy:
   skip_cleanup: true
-  provider: script
-  script: ./.scripts/travis-deploy.sh
+  provider: pages
+  local-dir: dist
+  target-branch: build
+  github-token: $GITHUB_TOKEN
+  verbose: true
   on:
     branch: master
 

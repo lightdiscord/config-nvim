@@ -3,20 +3,19 @@
 with lib;
 
 let
-    builder = vimUtils.buildVimPluginFrom2Nix;
-    build = { owner, repo, rev ? "HEAD", name ? repo, sha256 }: builder {
-        inherit name;
+    build = { owner, repo, rev, sha256, ... }: vimUtils.buildVimPluginFrom2Nix {
+        name = repo;
         src = fetchFromGitHub {
+            name = repo;
             fetchSubmodules = true;
-            leaveDotGit = true;
-            deepClone = true;
-            inherit name owner repo rev sha256;
+            leaveDotGit = false;
+            inherit owner repo rev sha256;
         };
     };
 in neovim.override rec {
     configure = {
         customRC = "source ${builtins.getEnv "HOME"}/.config/nvim/init.vim";
 
-        packages.myVimPackage.start = imap0 (_: build) (callPackage ./plugins {});
+        packages.myVimPackage.start = map build (callPackage ./plugins {});
     };
 }
