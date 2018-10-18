@@ -31,6 +31,6 @@ $ home-manager switch
 ```console
 $ mkdir -p ~/.config/nvim
 $ cd ~/.config/nvim
-$ git clone --single-branch -b build --recursive https://github.com/LightDiscord/Vim-files.git .
+$ git clone -b build https://github.com/LightDiscord/Vim-files.git .
+$ ./install.sh
 ```
-
