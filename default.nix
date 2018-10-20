@@ -14,7 +14,7 @@ let
     };
 in neovim.override rec {
     configure = {
-        customRC = "source ${builtins.getEnv "HOME"}/.config/nvim/init.vim";
+        customRC = "source ~/.config/nvim/init.vim";
 
         packages.myVimPackage.start = map build (callPackage ./plugins {});
     };
