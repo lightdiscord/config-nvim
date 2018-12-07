@@ -1,8 +1,8 @@
 import <nixpkgs/nixos/tests/make-test.nix> {
 	machine = { config, pkgs, ... }: {
-        environment.systemPackages = with pkgs; [ 
-            (callPackage ../../default.nix {})
-        ];
+		environment.systemPackages = with pkgs; [
+			(callPackage ../../default.nix {})
+		];
 	};
 
 	testScript = ''

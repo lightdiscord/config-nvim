@@ -2,55 +2,55 @@ with import <nixpkgs> { };
 
 with lib;
 
-let 
-    writeLine = file: command: "echo \"${command}\" >> ${file}";
-    writeLines = file: commands: concatStringsSep "\n" (map (writeLine file) commands);
+let
+	writeLine = file: command: "echo \"${command}\" >> ${file}";
+	writeLines = file: commands: concatStringsSep "\n" (map (writeLine file) commands);
 
-    clone = { repo, owner, rev, ... }: writeLines "install.sh" [
-        "git clone https://github.com/${owner}/${repo}"
-        "cd ${repo}"
-        "git reset --hard ${rev}"
-        "cd -"
-        ""
-    ];
+	clone = { repo, owner, rev, ... }: writeLines "install.sh" [
+		"git clone https://github.com/${owner}/${repo}"
+		"cd ${repo}"
+		"git reset --hard ${rev}"
+		"cd -"
+		""
+	];
 in runCommand "build" {
-    nativeBuildInputs = [ git ];
-    src = ./..;
+	nativeBuildInputs = [ git ];
+	src = ./..;
 } ''
-    mkdir -p $out
-    cp -R $src/*.vim $src/plugins $out
+	mkdir -p $out
+	cp -R $src/*.vim $src/plugins $out
 
-    cd $out
+	cd $out
 
-    touch install.sh
+	touch install.sh
 
-    ${ writeLines "install.sh" [
-        "#!/usr/bin/env bash"
-        "mkdir -p .plugins/pack/repositories/start"
-        "cd .plugins/pack/repositories/start"
-        ""
-    ] }
+	${ writeLines "install.sh" [
+		"#!/usr/bin/env bash"
+		"mkdir -p .plugins/pack/repositories/start"
+		"cd .plugins/pack/repositories/start"
+		""
+	] }
 
-    ${ concatStringsSep "\n" (map clone (callPackage ../plugins {})) }
+	${ concatStringsSep "\n" (map clone (callPackage ../plugins {})) }
 
-    ${ writeLine "install.sh" "cd -" }
+	${ writeLine "install.sh" "cd -" }
 
-    chmod u+x install.sh
+	chmod u+x install.sh
 
-    # Header part
+	# Header part
 
-    touch init.vim.tmp
+	touch init.vim.tmp
 
-    ${ writeLines "init.vim.tmp" [
-        "set nocompatible"
-        
-        "set packpath-=~/.vim/after"
-        "set packpath+=~/.config/nvim/.plugins"
-        "set packpath+=~/.vim/after"
+	${ writeLines "init.vim.tmp" [
+		"set nocompatible"
 
-        "filetype indent plugin on | syn on"
-    ] }
+		"set packpath-=~/.vim/after"
+		"set packpath+=~/.config/nvim/.plugins"
+		"set packpath+=~/.vim/after"
 
-    cat init.vim >> init.vim.tmp
-    mv init.vim.tmp init.vim
+		"filetype indent plugin on | syn on"
+	] }
+
+	cat init.vim >> init.vim.tmp
+	mv init.vim.tmp init.vim
 ''
