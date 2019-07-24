@@ -6,31 +6,13 @@ Also known as my neovim configuration.
 
 ## How to use it ?
 
-### With home-manager ?
+TODO: Plugins update and installation with nix.
 
-Clone the repository into `~/.config/nvim`.
-
-```nix
-{ pkgs, ... }:
-
-{
-	home.packages = [
-		(pkgs.callPackage ~/.config/nvim {})
-	];
-}
-```
-
-To activate this configuration you can run
+### Installation without nix ?
 
 ```console
-$ home-manager switch
-```
-
-### Without nix ?
-
-```console
-$ mkdir -p ~/.config/nvim
-$ cd ~/.config/nvim
-$ git clone -b build https://github.com/LightDiscord/Vim-files.git .
-$ ./install.sh
+$ # Clone the git repository into $clone.
+$ git clone git@github.com:lightdiscord/Vim-files.git $clone
+$ # Install everything (including plugins) into the $target directory (ideally ~/.config/nvim).
+$ $clone/scripts/install $target
 ```

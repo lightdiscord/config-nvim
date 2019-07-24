@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+readonly root="$(realpath "$(dirname "${BASH_SOURCE[@]}")/..")"
+
+[ ! -d "$1" ] && echo "Usage: The first argument must be the installation folder" && exit 1
+
+function install_plugin {
+	local -r owner=$(echo "$1" | jq '.owner' -r)
+	local -r repo=$(echo "$1" | jq '.repo' -r)
+	local -r rev=$(echo "$1" | jq '.rev' -r)
+
+	git clone "https://github.com/$owner/$repo.git"
+	cd "$repo"
+	git reset --hard "$rev"
+	cd -
+}
+
+function install_plugins {
+	mkdir -p "$1/plugins/pack/repositories/start"
+	cd "$1/plugins/pack/repositories/start"
+
+	while IFS= read -r line
+	do
+		install_plugin  "$line"
+	done < <(jq '.[]' "$root/plugins/plugins.json" -c)
+
+	cd -
+}
+
+function create_init {
+	mkdir -p "$1"
+	cd "$1"
+
+	touch init.vim
+
+	echo "set nocompatible" > init.vim
+	echo "set packpath-=~/.vim/after" >> init.vim
+	echo "set packpath+=$1/plugins" >> init.vim
+	echo "set packpath+=~/.vim/after" >> init.vim
+	echo "filetype indent plugin on | syn on" >> init.vim
+	cat "$root/src/init.vim" >> init.vim
+
+	cd -
+}
+
+function main {
+	echo "Installing plugins..."
+	install_plugins "$1"
+
+	echo "Create init.vim..."
+	create_init "$1"
+}
+
+main "$1"
