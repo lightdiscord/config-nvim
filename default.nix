@@ -1,17 +1,18 @@
-{ lib, callPackage, neovim, vimUtils, fetchFromGitHub, ... }:
+{ nixpkgs ? import <nixpkgs> { } }:
 
-with lib;
+with nixpkgs.lib;
 
 let
-	build = { owner, repo, rev, sha256, ... }: vimUtils.buildVimPluginFrom2Nix {
-		name = repo;
-		src = fetchFromGitHub {
-			name = repo;
+	build = { owner, repo, rev, sha256, name ? repo, ... }: nixpkgs.vimUtils.buildVimPluginFrom2Nix {
+		inherit name;
+
+		src = nixpkgs.fetchFromGitHub {
 			fetchSubmodules = true;
-			inherit owner repo rev sha256;
+
+			inherit name owner repo rev sha256;
 		};
 	};
-in neovim.override rec {
+in nixpkgs.neovim.override rec {
 	configure = {
 		customRC = builtins.readFile ./src/init.vim;
 
