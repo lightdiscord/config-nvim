@@ -1,0 +1,39 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p nix-prefetch-git jq
+
+readonly root="$(dirname "${BASH_SOURCE[@]}")/.."
+
+function join {
+	local IFS="$1"
+	shift
+	echo "$*"
+}
+
+function fetch {
+	local -r owner=$(echo "$1" | cut -d"/" -f1)
+	local -r repository=$(echo "$1" | cut -d"/" -f2)
+
+	echo "[$2/$3] Fetching: github.com:$owner/$repository" >&2
+
+	nix-prefetch-git --fetch-submodules "https://github.com/$owner/$repository.git" |
+	jq "{rev,sha256}+{owner:\"$owner\",repo:\"$repository\"}" -c
+}
+
+function main {
+	readarray input < <(sed -e '/^$/d' -e '/^#/d' $root/plugins/plugins.txt)
+	local total=${#input[@]}
+	local counter=0
+	declare -a plugins
+
+	for line in "${input[@]}"
+	do
+		counter=$((counter+1))
+		plugins+=($(fetch $line $counter $total))
+	done
+
+	echo "[$(join "," ${plugins[@]})]" | jq "."
+}
+
+main > $root/plugins/plugins.json
+
+# vim: ft=sh

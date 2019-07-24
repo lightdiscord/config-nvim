@@ -1,0 +1,74 @@
+[
+  {
+    "rev": "aae6d30b1ec135e37ec3bea1885d161c6174572b",
+    "sha256": "0f6s6ic1wid3nry8s5il2gi4arqhbv77ppw526hlsldqa1g7xncc",
+    "owner": "w0rp",
+    "repo": "ale"
+  },
+  {
+    "rev": "2295e612d936671048035dbc447f5400cbee60de",
+    "sha256": "1iay39zsp00d5mrqzggr40g6253qfk17wvjvmdp3xn50jraj8gwh",
+    "owner": "cespare",
+    "repo": "vim-toml"
+  },
+  {
+    "rev": "a3eed01f4de995a51dfdd06287e44fcb231f6adf",
+    "sha256": "0pwdfwws1dj3705m00ghw3dvym5zbm00bfsj023gmbp6vr8wn6yi",
+    "owner": "LnL7",
+    "repo": "vim-nix"
+  },
+  {
+    "rev": "b92de0138d66c54be818f87138750fe5b680355a",
+    "sha256": "1h0anccp4xslsmhzpc7p6l58xa5r6ijlkq6jhl87m4g9rv6709yx",
+    "owner": "tpope",
+    "repo": "vim-fugitive"
+  },
+  {
+    "rev": "50b95cbbcd09c046121367d49039710e9dc9c15f",
+    "sha256": "1yvjlm90alc4zsdsppkmsja33wsgm2q6kkn9dxn6xqwnq4jw5s7h",
+    "owner": "dag",
+    "repo": "vim-fish"
+  },
+  {
+    "rev": "6b50f575752605f7e0a0e99e88be4129b2f99311",
+    "sha256": "1kp82k3aympfhmdnfg45ynf3d5chs75ni740z5j05x6pgcj88rwz",
+    "owner": "sgur",
+    "repo": "vim-editorconfig"
+  },
+  {
+    "rev": "3f7222e488ee06d16f3dd773a0e570fed42d61bc",
+    "sha256": "04qmdp3ja07f6zbxr44532qr7g66csrbbk9fy4nm9m24rhk8j9gl",
+    "owner": "vim-airline",
+    "repo": "vim-airline"
+  },
+  {
+    "rev": "b85165844240fe0b9121df487679a320e053abc7",
+    "sha256": "0yi381n7k3flcld66n8hhb3fzbqflif5d07qwn8f6zsg9n52dciw",
+    "owner": "vim-airline",
+    "repo": "vim-airline-themes"
+  },
+  {
+    "rev": "08fbcbbb8c4102df7c4099434826ac0d1fa3af15",
+    "sha256": "0xmsls0icd4kdwl13hvcr2vlasadb5i1sira06r876ylpymvamb1",
+    "owner": "rust-lang",
+    "repo": "rust.vim"
+  },
+  {
+    "rev": "63c59208c1f9eef7068a944f5c3033bd1a348b97",
+    "sha256": "11531x591dw99mf3ladsim6cv162ypb421q60kljg0hg7fvjml8y",
+    "owner": "scrooloose",
+    "repo": "nerdtree"
+  },
+  {
+    "rev": "564176f01d7f3f7f8ab452ff4e1f5314de7b0981",
+    "sha256": "1nzzii9g4ckf561csrg7nclnsb6gr5lgghmlhdsxabkcp2lkhnmr",
+    "owner": "kien",
+    "repo": "ctrlp.vim"
+  },
+  {
+    "rev": "cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86",
+    "sha256": "12qkq1x96bm1cmqfg6sb8jxpl2b6gwvhc5qn3gva6vl4nx3ianqi",
+    "owner": "morhetz",
+    "repo": "gruvbox"
+  }
+]

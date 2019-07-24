@@ -1,7 +1,6 @@
 language: nix
 
 script:
-  - nix build -f ./scripts/test/minimal.nix -v
   - nix build -f ./scripts/build.nix -v
 
 before_deploy:

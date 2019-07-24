@@ -31,7 +31,7 @@ in runCommand "build" {
 		""
 	] }
 
-	${ concatStringsSep "\n" (map clone (callPackage ../plugins {})) }
+	${ concatStringsSep "\n" (map clone (import ../plugins)) }
 
 	${ writeLine "install.sh" "cd -" }
 
