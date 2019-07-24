@@ -1,4 +1,4 @@
-# Vim-files
+# neovim-files
 
 Also known as my neovim configuration.
 
@@ -12,7 +12,7 @@ TODO: Plugins update and installation with nix.
 
 ```console
 $ # Clone the git repository into $clone.
-$ git clone git@github.com:lightdiscord/Vim-files.git $clone
+$ git clone git@github.com:lightdiscord/neovim-files.git $clone
 $ # Install everything (including plugins) into the $target directory (ideally ~/.config/nvim).
 $ $clone/scripts/install $target
 ```
