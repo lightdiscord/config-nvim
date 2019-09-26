@@ -10,3 +10,8 @@ rust-lang/rust.vim
 scrooloose/nerdtree
 kien/ctrlp.vim
 morhetz/gruvbox
+aurieh/discord.nvim
+leafgarland/typescript-vim
+posva/vim-vue
+junegunn/goyo.vim
+junegunn/limelight.vim
