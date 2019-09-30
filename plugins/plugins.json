@@ -1,8 +1,8 @@
 [
   {
-    "rev": "61cfb3fefb0ebd8654be452046bd2ba24025311f",
-    "sha256": "1g52n1njxgnhjg3c4jg3xdill829hqlxns3j0hkwwivmq44yw1q7",
-    "owner": "w0rp",
+    "rev": "41ff80dc9ec2cc834cc8c4aaa753e308223d48b8",
+    "sha256": "1kqrhxwlbzlw8f5v713lsfb110186a4hsadbg3y44rfklq9xrdpb",
+    "owner": "dense-analysis",
     "repo": "ale"
   },
   {
@@ -18,10 +18,16 @@
     "repo": "vim-nix"
   },
   {
-    "rev": "1d8c0a38b2fc4ce9ca4204676573b6335725ff75",
-    "sha256": "0cns98r10zg59bq2mh361vlxmbz2ayc8r61rhimkyw9q1pzghi9q",
+    "rev": "eedfd2a570b608e1609af97d49018cb8bf3b5e37",
+    "sha256": "0l8wywyd3nz50c3pcygwzmipx7xbvjq5gkqdd5sjd9q76db76bp9",
     "owner": "tpope",
     "repo": "vim-fugitive"
+  },
+  {
+    "rev": "4bd1ecd7f38206ef26c37d7d142df58c4237d9dc",
+    "sha256": "0wz8p8fm48dbpzd00h9qw0q2s3r7nm8qa5kcligcrzh1kv139026",
+    "owner": "tpope",
+    "repo": "vim-dispatch"
   },
   {
     "rev": "50b95cbbcd09c046121367d49039710e9dc9c15f",
@@ -48,22 +54,10 @@
     "repo": "vim-airline-themes"
   },
   {
-    "rev": "60630efb0035887ed56233cd7bb418b1033a39e0",
-    "sha256": "127lakn03r9rb2an6s5za9qr7afa1zb1rj5h5h4h33hkqp2p5cv9",
+    "rev": "d0456774a8a9616fea9df66e5131d6428450ebed",
+    "sha256": "1zbd7gbiyx1lmr8kg70xwad88rrs18q7rgy7yv85l57zs71ffnib",
     "owner": "rust-lang",
     "repo": "rust.vim"
-  },
-  {
-    "rev": "9193962ad88f15d9f426c3cfb8a274ff1dd0c5b2",
-    "sha256": "1mgi6k3q46za4c8z9nc4rn6pcj4bc9pkvfqbzymwn03pj4r6n8yp",
-    "owner": "scrooloose",
-    "repo": "nerdtree"
-  },
-  {
-    "rev": "564176f01d7f3f7f8ab452ff4e1f5314de7b0981",
-    "sha256": "1nzzii9g4ckf561csrg7nclnsb6gr5lgghmlhdsxabkcp2lkhnmr",
-    "owner": "kien",
-    "repo": "ctrlp.vim"
   },
   {
     "rev": "cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86",
@@ -100,5 +94,17 @@
     "sha256": "0bxmihv9i96k6pl37pzgri03vbvjwlp34rl4gkj8w2ajhhi6nsnn",
     "owner": "junegunn",
     "repo": "limelight.vim"
+  },
+  {
+    "rev": "359a80e3a34aacbd5257713b6a88aa085337166f",
+    "sha256": "0a01g0gw59m57zizidvm9n89qh8lvj0aq4kyxy27i72ysclp3wsf",
+    "owner": "junegunn",
+    "repo": "fzf.vim"
+  },
+  {
+    "rev": "ab11b74be4b0c9fac88d95f0f563d0dc0cb06ed3",
+    "sha256": "0c2iymbba2zy0nx0qwdzk11wisqhpnqc2xl6vhdrqjps57czsbr1",
+    "owner": "junegunn",
+    "repo": "fzf"
   }
 ]

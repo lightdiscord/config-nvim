@@ -1,39 +1,70 @@
-#!/usr/bin/env nix-shell
-#!nix-shell -i bash -p nix-prefetch-git jq
+#! /usr/bin/env node
 
-readonly root="$(dirname "${BASH_SOURCE[@]}")/.."
+const fs = require('fs').promises;
+const path = require('path');
+const { execFile } = require('child_process');
 
-function join {
-	local IFS="$1"
-	shift
-	echo "$*"
+const map = (fn) => (list) => {
+	return list.map(fn);
+};
+
+const filterMap = (fn) => (list) => {
+	return map(fn)(list.filter(fn));
+};
+
+const unique = (list) => {
+	return [...new Set(list)];
+};
+
+const inspect = (fn) => (value) => {
+	return (fn(value), value);
 }
 
-function fetch {
-	local -r owner=$(echo "$1" | cut -d"/" -f1)
-	local -r repository=$(echo "$1" | cut -d"/" -f2)
+const resolve = (file) => {
+	return path.resolve(__dirname, '..', 'plugins', file);
+};
 
-	echo "[$2/$3] Fetching: github.com:$owner/$repository" >&2
+const extractFromLine = (line) => {
+	const [owner, repo] = line.trim().split('/');
 
-	nix-prefetch-git --fetch-submodules "https://github.com/$owner/$repository.git" |
-	jq "{rev,sha256}+{owner:\"$owner\",repo:\"$repository\"}" -c
-}
+	if (line.startsWith('#') || !owner || !repo) {
+		return false;
+	}
 
-function main {
-	readarray input < <(sed -e '/^$/d' -e '/^#/d' $root/plugins/plugins.txt)
-	local total=${#input[@]}
-	local counter=0
-	declare -a plugins
+	return { owner, repo };
+};
 
-	for line in "${input[@]}"
-	do
-		counter=$((counter+1))
-		plugins+=($(fetch $line $counter $total))
-	done
+const prefetchGit = ({ owner, repo }) => {
+	const url = `https://github.com/${owner}/${repo}`;
 
-	echo "[$(join "," ${plugins[@]})]" | jq "."
-}
+	return new Promise((resolve, reject) => {
+		console.info(`Fetching ${url}...`);
 
-main > $root/plugins/plugins.json
+		execFile('nix-prefetch-git', ['--fetch-submodules', url], (error, stdout) => {
+			if (error) {
+				return reject(error);
+			}
 
-# vim: ft=sh
+			const { rev, sha256 } = JSON.parse(stdout);
+
+			console.info(`Fetched ${url}!`);
+
+			return resolve({ rev, sha256, owner, repo });
+		});
+	});
+};
+
+const format = json => {
+	return JSON.stringify(json, null, 2);
+};
+
+fs.readFile(resolve('plugins.txt'), { encoding: 'utf8' })
+	.then((content) => content.split('\n'))
+	.then(filterMap(extractFromLine))
+	.then(unique)
+	.then(inspect(console.log))
+	.then(map(prefetchGit))
+	.then(Promise.all.bind(Promise))
+	.then(format)
+	.then(text => fs.writeFile(resolve('plugins.json'), text, 'utf8'))
+	.then(() => console.log('Finished!'));

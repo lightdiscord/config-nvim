@@ -1,1 +1,1 @@
-builtins.fromJSON(builtins.readFile ./plugins.json)
+builtins.fromJSON (builtins.readFile ./plugins.json)
