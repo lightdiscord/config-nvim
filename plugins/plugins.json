@@ -1,7 +1,7 @@
 [
   {
-    "rev": "41ff80dc9ec2cc834cc8c4aaa753e308223d48b8",
-    "sha256": "1kqrhxwlbzlw8f5v713lsfb110186a4hsadbg3y44rfklq9xrdpb",
+    "rev": "c06467438dff38b939fd81b32395296d01a59df6",
+    "sha256": "09yanyz9ham4r0a7qzrayfsckwnfq1cq1xzy5ybna0vs44xhmgsn",
     "owner": "dense-analysis",
     "repo": "ale"
   },
@@ -18,8 +18,8 @@
     "repo": "vim-nix"
   },
   {
-    "rev": "eedfd2a570b608e1609af97d49018cb8bf3b5e37",
-    "sha256": "0l8wywyd3nz50c3pcygwzmipx7xbvjq5gkqdd5sjd9q76db76bp9",
+    "rev": "0a77016ef56672767d9db3dcf6f51ef22f4ca4be",
+    "sha256": "114pd2aqklgzyj3545qdq6dghgzy2l1cyim71zrrsybh041gc9y9",
     "owner": "tpope",
     "repo": "vim-fugitive"
   },
@@ -42,8 +42,8 @@
     "repo": "vim-editorconfig"
   },
   {
-    "rev": "89d1d43165c8ef6c029ee0e9590a0d67978a7c97",
-    "sha256": "0nkq6a5r2dx0jqp6ikbzbrvlfgpcn28y5l9b41bfpxkqplh03bhn",
+    "rev": "6d665580a3435f21ad560af192d854d4b608fff5",
+    "sha256": "0wldkkbs0yiyqr5sjascagbbqk15v26sc66dr1kd10nzqgw4sl2l",
     "owner": "vim-airline",
     "repo": "vim-airline"
   },
@@ -54,8 +54,8 @@
     "repo": "vim-airline-themes"
   },
   {
-    "rev": "d0456774a8a9616fea9df66e5131d6428450ebed",
-    "sha256": "1zbd7gbiyx1lmr8kg70xwad88rrs18q7rgy7yv85l57zs71ffnib",
+    "rev": "8293adcd9c5645379133bea4d77de30b1476528c",
+    "sha256": "1cc1wq2lbsl7jxh3mal0yhj3z2fn1q60ip4666kshx5yryikhs3p",
     "owner": "rust-lang",
     "repo": "rust.vim"
   },
@@ -102,9 +102,21 @@
     "repo": "fzf.vim"
   },
   {
-    "rev": "ab11b74be4b0c9fac88d95f0f563d0dc0cb06ed3",
-    "sha256": "0c2iymbba2zy0nx0qwdzk11wisqhpnqc2xl6vhdrqjps57czsbr1",
+    "rev": "0c6c76e08115d0ba160e2c95c8692e4174aa5368",
+    "sha256": "13r647dcx6089b2w13072n1lvjg3fdvbndnmq92bmi8h4jz3rszi",
     "owner": "junegunn",
     "repo": "fzf"
+  },
+  {
+    "rev": "371feb7e540afc1d25c3369d4157358d21f51681",
+    "sha256": "1bh20jriz5yhaggj3vdbqjzdikb191yk6r9gfwxv0prywgknwql2",
+    "owner": "scrooloose",
+    "repo": "nerdtree"
+  },
+  {
+    "rev": "5f559fae12a8babf414376906197dbd751e11380",
+    "sha256": "0z9lny12hckc635zafh1mdh58pikz5k19kkhxj1m77h15rwwms7f",
+    "owner": "mattn",
+    "repo": "emmet-vim"
   }
 ]

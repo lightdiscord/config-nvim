@@ -16,4 +16,5 @@ junegunn/goyo.vim
 junegunn/limelight.vim
 junegunn/fzf.vim
 junegunn/fzf
-
+scrooloose/nerdtree
+mattn/emmet-vim

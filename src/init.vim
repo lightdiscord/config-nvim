@@ -30,3 +30,5 @@ let g:airline_theme="gruvbox"
 " Configuration: Editorconfig
 autocmd bufenter * call editorconfig#load()
 
+map <C-p> :Files<CR>
+
