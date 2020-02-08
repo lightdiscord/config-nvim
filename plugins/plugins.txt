@@ -1,4 +1,7 @@
-dense-analysis/ale
+# dense-analysis/ale
+prabirshrestha/async.vim
+prabirshrestha/vim-lsp
+mattn/vim-lsp-settings
 cespare/vim-toml
 LnL7/vim-nix
 tpope/vim-fugitive
@@ -7,9 +10,7 @@ dag/vim-fish
 sgur/vim-editorconfig
 vim-airline/vim-airline
 vim-airline/vim-airline-themes
-rust-lang/rust.vim
 morhetz/gruvbox
-aurieh/discord.nvim
 leafgarland/typescript-vim
 posva/vim-vue
 junegunn/goyo.vim

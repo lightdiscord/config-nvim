@@ -12,7 +12,9 @@ let
 			inherit name owner repo rev sha256;
 		};
 	};
-in pkgs.neovim.override rec {
+in pkgs.neovim.override {
+	withNodeJs = true;
+
 	configure = {
 		customRC = builtins.readFile ./src/init.vim;
 

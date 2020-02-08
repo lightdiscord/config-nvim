@@ -31,4 +31,11 @@ let g:airline_theme="gruvbox"
 autocmd bufenter * call editorconfig#load()
 
 map <C-p> :Files<CR>
+map <F3> :NERDTree<CR>
+map <F4> :LspDocumentDiagnostics<CR>
 
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_virtual_text_enabled = 0
+
+highlight link LspErrorText GruvboxRedSign " requires gruvbox
+highlight clear LspWarningLine
