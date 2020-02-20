@@ -31,7 +31,7 @@ let g:airline_theme="gruvbox"
 autocmd bufenter * call editorconfig#load()
 
 map <C-p> :Files<CR>
-map <F3> :NERDTree<CR>
+map <F3> :NERDTreeToggle<CR>
 map <F4> :LspDocumentDiagnostics<CR>
 
 let g:lsp_diagnostics_echo_cursor = 1
