@@ -39,3 +39,11 @@ let g:lsp_virtual_text_enabled = 0
 
 highlight link LspErrorText GruvboxRedSign " requires gruvbox
 highlight clear LspWarningLine
+
+if executable('hie-wrapper')
+	au User lsp_setup call lsp#register_server({
+		\ 'name': 'hie-wrapper',
+		\ 'cmd': {server_info->['hie-wrapper', '--lsp']},
+		\ 'whitelist': ['haskell'],
+		\ })
+endif

@@ -6,14 +6,14 @@
     "repo": "async.vim"
   },
   {
-    "rev": "b9e68161933e398465c3c3d77ad21ea2596c499b",
-    "sha256": "0bqig7qdlh27z9r1c2qlwn3l5nhw1j63qmhrp5rxckd2jdfwz2is",
+    "rev": "651bccfab85615aea250a797c7d95f30db68f3c8",
+    "sha256": "0nh9cf1czz7y4hcvv699rmk3qwl30xfm45l80rxpl4l7ga9p35ls",
     "owner": "prabirshrestha",
     "repo": "vim-lsp"
   },
   {
-    "rev": "b6c8c4443261dc5f5f932143f3ace78c6bcf4923",
-    "sha256": "037775hzwi3swm0gbh5i6482aqb1g90ny8gpp9d2wa8ylbdafq53",
+    "rev": "c062e33e48161468d4df60696fa43dae0dfabce7",
+    "sha256": "1780sn0f72x5n9w4j8qnhbk5z99m0dj8njcqb7755zrg6688p9i5",
     "owner": "mattn",
     "repo": "vim-lsp-settings"
   },
@@ -30,14 +30,14 @@
     "repo": "vim-nix"
   },
   {
-    "rev": "9d62c677378f5ac5abaa8229eb49aaf133fba3fa",
-    "sha256": "14b7i4rfxyvzlqklfniqpsk2ilyz07ndggd0wdhyjm6g1rwxq83w",
+    "rev": "31629d8bd18ddb5db6d9c55585d1eeb325a6bb43",
+    "sha256": "1piz0fabd6ryq5316rmlrvk2dz5q7r2ap9ah7srzfsns2fdy9v07",
     "owner": "tpope",
     "repo": "vim-fugitive"
   },
   {
-    "rev": "1206e1474fc613caeb1ba56d36b71d7f9f7760ac",
-    "sha256": "15mdn8s9isnscsaggkz552f8hi2yqq9wksymrxkihihv0nwwdgi6",
+    "rev": "3757ddad87073a6ded8c34dfabb28c325acf6c02",
+    "sha256": "0vnkwn896v9dsqf329nvdik60bm6f0m0n32x3fqmzazqgqlx055j",
     "owner": "tpope",
     "repo": "vim-dispatch"
   },
@@ -54,26 +54,26 @@
     "repo": "vim-editorconfig"
   },
   {
-    "rev": "1240403ce570fb2b4e056d7c361d44dd9583b711",
-    "sha256": "1blc9avxkgwax3jv41s54glc33z743nz4j0glmxql01yx3cjmg52",
+    "rev": "0b2683464877c1e39d0c67427c7fdc4bc6697d15",
+    "sha256": "010cqvszgfvwci1iw8w0kwjdy4284i16yarfcsq5zcd0786sn8s6",
     "owner": "vim-airline",
     "repo": "vim-airline"
   },
   {
-    "rev": "7f2081e2cbb4bd3e29ce1d4379eb6444c62d6bed",
-    "sha256": "0mygfj4jkgwvhrnh0sygabji6ndnhw56qiyc4x5fxk1k5gnxi30g",
+    "rev": "9772475fcc24bee50c884aba20161465211520c8",
+    "sha256": "1nbwwaky9j4w9qjsbgg2a9zl3f2i9zjqqbh1lmz4z9m1mixj6djp",
     "owner": "vim-airline",
     "repo": "vim-airline-themes"
   },
   {
-    "rev": "cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86",
-    "sha256": "12qkq1x96bm1cmqfg6sb8jxpl2b6gwvhc5qn3gva6vl4nx3ianqi",
+    "rev": "040138616bec342d5ea94d4db296f8ddca17007a",
+    "sha256": "0qk2mqs04qlxkc1ldgjbiv1yisi2xl2b8svmjz0hdp9y2l5vfccw",
     "owner": "morhetz",
     "repo": "gruvbox"
   },
   {
-    "rev": "616186fd8a04afa32bae8dc0b70ab7f9cdb427fd",
-    "sha256": "0mq6yxq5ais47ib0ifvdl3qi4c4wz0jwzqsz5djb616xfnmp8ysx",
+    "rev": "17d85d8051ba21283e62a9101734981e10b732fd",
+    "sha256": "17z8ygns97wlnm4vq7kgkx3ymnbb2f6imxn02fc0iywkrhdqv7mj",
     "owner": "leafgarland",
     "repo": "typescript-vim"
   },
@@ -96,20 +96,26 @@
     "repo": "limelight.vim"
   },
   {
-    "rev": "dc4c4c22715c060a2babd5a5187004bdecbcdea7",
-    "sha256": "0vd5jj0b0sdgawmadxkfl3s2d6m7nwgprhwnah4k7in8lcgq0jz1",
+    "rev": "48a2d80a24d19bfaafd91005786653bc49303c62",
+    "sha256": "0p4ifdl70iwsdqsgpbs66lam7fzdc2jxa9hvzslwi0gllccpfsm5",
     "owner": "junegunn",
     "repo": "fzf.vim"
   },
   {
-    "rev": "4ec403347c803beccffcf7e9f12bacafcb5d24a2",
-    "sha256": "16lqn13fdrl6d04qsqwqvw9wajfcqaf3jvihmc0m31sinjrgxwp8",
+    "rev": "9c293bb82b6be333c857d288d10aab730220a0e7",
+    "sha256": "0v365ljgflpifc0d265ipsdg33rqgsz2vlridmbvflcg52nq1dr3",
     "owner": "junegunn",
     "repo": "fzf"
   },
   {
-    "rev": "26740d1157dc1befe2a088052e10cf00436a5003",
-    "sha256": "13q14clp94mmzfkixxd9rg16div5sngnxhqagvj06jw53cs23cdg",
+    "rev": "12dd6316974f71ce333e360c0260b4e1f81169c3",
+    "sha256": "0xsv8241wvfb88k9vhw6iilkfjyhcp58ipdy011y4hs7asvick2w",
+    "owner": "junegunn",
+    "repo": "vim-easy-align"
+  },
+  {
+    "rev": "e67324fdea7a192c7ce1b4c6b3c3b9f82f11eee7",
+    "sha256": "0y7hd69k0i21cqgs11n80ljv6cl0gfcjjwa0dvdywpd8mmn1ad4k",
     "owner": "scrooloose",
     "repo": "nerdtree"
   },
