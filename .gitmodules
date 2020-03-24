@@ -22,9 +22,6 @@
 [submodule "pack/default/start/vim-fish"]
 	path = src/pack/default/start/vim-fish
 	url = git@github.com:dag/vim-fish.git
-[submodule "pack/default/start/vim-editorconfig"]
-	path = src/pack/default/start/vim-editorconfig
-	url = git@github.com:sgur/vim-editorconfig.git
 [submodule "pack/default/start/vim-airline"]
 	path = src/pack/default/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
@@ -61,3 +58,6 @@
 [submodule "pack/default/start/emmet-vim"]
 	path = src/pack/default/start/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
+[submodule "src/pack/default/start/editorconfig-vim"]
+	path = src/pack/default/start/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
