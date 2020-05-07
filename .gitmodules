@@ -61,3 +61,6 @@
 [submodule "src/pack/default/start/editorconfig-vim"]
 	path = src/pack/default/start/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "src/pack/default/start/vim-svelte"]
+	path = src/pack/default/start/vim-svelte
+	url = git@github.com:evanleck/vim-svelte.git
