@@ -7,7 +7,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 
 if (has("termguicolors"))
-	set termguicolors
+  set termguicolors
 endif
 
 let g:gruvbox_contrast_dark="hard"

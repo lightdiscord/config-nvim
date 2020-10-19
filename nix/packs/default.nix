@@ -1,7 +1,7 @@
 { linkFarmFromDrvs, callPackage }:
 
 linkFarmFromDrvs "packs" [
-	(linkFarmFromDrvs "pack" [
-		(callPackage ./default { })
-	])
+  (linkFarmFromDrvs "pack" [
+    (callPackage ./default { })
+  ])
 ]
