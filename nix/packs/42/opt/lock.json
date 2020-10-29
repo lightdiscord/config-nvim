@@ -1,0 +1,9 @@
+[
+  {
+    "owner": "lightdiscord",
+    "repo": "vim-norminette",
+    "rev": "b96896d5c5cb21a67ef20273208636dbb38c1121",
+    "sha256": "sha256-9jJijir4T3Fhdo7k87ol6QpnvjPIieTpGWBuKFHSmDY=",
+    "fetchSubmodules": true
+  }
+]
