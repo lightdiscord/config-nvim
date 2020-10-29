@@ -13,4 +13,4 @@ let
 
 in
 
-  linkFarm "opt" entries
+  linkFarm "start" entries
