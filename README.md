@@ -2,7 +2,7 @@
 
 ## Install
 
-### Generate parser symlink for tree-sitter
+### Generate parser folder for tree-sitter
 
 ```console
 $ nix build '.#tree-sitter-parsers' -o parser
