@@ -1,0 +1,51 @@
+[submodule "pack/colors/opt/ayu-vim"]
+	path = pack/colors/opt/ayu-vim
+	url = git@github.com:ayu-theme/ayu-vim.git
+[submodule "pack/utils/start/vim-fugitive"]
+	path = pack/utils/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "pack/utils/start/fzf.vim"]
+	path = pack/utils/start/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "pack/utils/start/fzf"]
+	path = pack/utils/start/fzf
+	url = git@github.com:junegunn/fzf.git
+[submodule "pack/languages/start/nvim-lspconfig"]
+	path = pack/languages/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+[submodule "pack/utils/opt/nerdtree"]
+	path = pack/utils/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "pack/languages/opt/emmet-vim"]
+	path = pack/languages/opt/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "pack/utils/start/editorconfig-vim"]
+	path = pack/utils/start/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "pack/languages/start/vim-nix"]
+	path = pack/languages/start/vim-nix
+	url = git@github.com:LnL7/vim-nix.git
+[submodule "pack/languages/start/nvim-treesitter"]
+	path = pack/languages/start/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/languages/start/vim-svelte"]
+	path = pack/languages/start/vim-svelte
+	url = git@github.com:evanleck/vim-svelte.git
+[submodule "pack/languages/start/nvim-cmp"]
+	path = pack/languages/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "pack/languages/start/cmp-nvim-lsp"]
+	path = pack/languages/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
+[submodule "pack/languages/start/cmp-buffer"]
+	path = pack/languages/start/cmp-buffer
+	url = git@github.com:hrsh7th/cmp-buffer.git
+[submodule "pack/languages/start/vim-vsnip"]
+	path = pack/languages/start/vim-vsnip
+	url = git@github.com:hrsh7th/vim-vsnip.git
+[submodule "pack/colors/opt/vim-monotone"]
+	path = pack/colors/opt/vim-monotone
+	url = https://github.com/Lokaltog/vim-monotone.git
+[submodule "pack/colors/opt/github-nvim-theme"]
+	path = pack/colors/opt/github-nvim-theme
+	url = git@github.com:projekt0n/github-nvim-theme.git

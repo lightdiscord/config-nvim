@@ -1,0 +1,6 @@
+command LspDeclaration lua vim.lsp.buf.declaration()
+command LspDefinition lua vim.lsp.buf.definition()
+command LspHover lua vim.lsp.buf.hover()
+command LspImplementation lua vim.lsp.buf.implementation()
+command LspReferences lua vim.lsp.buf.references()
+command LspRename lua vim.lsp.buf.rename()
