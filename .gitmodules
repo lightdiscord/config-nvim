@@ -40,3 +40,6 @@
 [submodule "pack/utils/start/plenary.nvim"]
 	path = pack/utils/start/plenary.nvim
 	url = git@github.com:nvim-lua/plenary.nvim
+[submodule "pack/utils/start/nvim-tree.lua"]
+	path = pack/utils/start/nvim-tree.lua
+	url = git@github.com:kyazdani42/nvim-tree.lua.git

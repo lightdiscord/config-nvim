@@ -16,9 +16,11 @@ let g:material_style = "darker"
 set background=dark
 colorscheme material
 
+lua require("config-nvim-tree")
 lua require("my-lsp-config")
 
 set wildignore+=*.o,*.d
 set inccommand=split
 
 nnoremap <C-h> :set list!<CR>
+
