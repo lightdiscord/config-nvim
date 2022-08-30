@@ -1,45 +1,45 @@
 [submodule "pack/utils/start/vim-fugitive"]
-	path = pack/utils/start/vim-fugitive
+	path = pack/everything/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
 [submodule "pack/languages/start/nvim-lspconfig"]
-	path = pack/languages/start/nvim-lspconfig
+	path = pack/everything/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
 [submodule "pack/languages/opt/emmet-vim"]
-	path = pack/languages/opt/emmet-vim
+	path = pack/everything/opt/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
 [submodule "pack/utils/start/editorconfig-vim"]
-	path = pack/utils/start/editorconfig-vim
+	path = pack/everything/start/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
 [submodule "pack/languages/start/vim-nix"]
-	path = pack/languages/start/vim-nix
+	path = pack/everything/start/vim-nix
 	url = git@github.com:LnL7/vim-nix.git
 [submodule "pack/languages/start/nvim-treesitter"]
-	path = pack/languages/start/nvim-treesitter
+	path = pack/everything/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
 [submodule "pack/languages/start/vim-svelte"]
-	path = pack/languages/start/vim-svelte
+	path = pack/everything/start/vim-svelte
 	url = git@github.com:evanleck/vim-svelte.git
 [submodule "pack/languages/start/nvim-cmp"]
-	path = pack/languages/start/nvim-cmp
+	path = pack/everything/start/nvim-cmp
 	url = git@github.com:hrsh7th/nvim-cmp.git
 [submodule "pack/languages/start/cmp-nvim-lsp"]
-	path = pack/languages/start/cmp-nvim-lsp
+	path = pack/everything/start/cmp-nvim-lsp
 	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
 [submodule "pack/languages/start/cmp-buffer"]
-	path = pack/languages/start/cmp-buffer
+	path = pack/everything/start/cmp-buffer
 	url = git@github.com:hrsh7th/cmp-buffer.git
 [submodule "pack/languages/start/vim-vsnip"]
-	path = pack/languages/start/vim-vsnip
+	path = pack/everything/start/vim-vsnip
 	url = git@github.com:hrsh7th/vim-vsnip.git
 [submodule "pack/colors/start/material.nvim"]
-	path = pack/colors/start/material.nvim
+	path = pack/everything/start/material.nvim
 	url = git@github.com:marko-cerovac/material.nvim.git
 [submodule "pack/utils/start/telescope.nvim"]
-	path = pack/utils/start/telescope.nvim
+	path = pack/everything/start/telescope.nvim
 	url = git@github.com:nvim-telescope/telescope.nvim.git
 [submodule "pack/utils/start/plenary.nvim"]
-	path = pack/utils/start/plenary.nvim
+	path = pack/everything/start/plenary.nvim
 	url = git@github.com:nvim-lua/plenary.nvim
 [submodule "pack/utils/start/nvim-tree.lua"]
-	path = pack/utils/start/nvim-tree.lua
+	path = pack/everything/start/nvim-tree.lua
 	url = git@github.com:kyazdani42/nvim-tree.lua.git
