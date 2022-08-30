@@ -1,14 +1,14 @@
 {
   description = "Neovim related packages";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs";
   inputs.neovim.url = "github:neovim/neovim/master?dir=contrib";
+  inputs.nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-  outputs = { self, nixpkgs, neovim }: {
+  outputs = { self, nixpkgs-unstable, neovim }: {
     packages.x86_64-linux.neovim = neovim.defaultPackage.x86_64-linux;
 
     packages.x86_64-linux.tree-sitter-parsers =
-      nixpkgs.legacyPackages.x86_64-linux.tree-sitter.withPlugins (packages: with packages; [
+      nixpkgs-unstable.legacyPackages.x86_64-linux.tree-sitter.withPlugins (packages: with packages; [
         tree-sitter-bash
         tree-sitter-c
         tree-sitter-cpp

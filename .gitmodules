@@ -1,21 +1,9 @@
-[submodule "pack/colors/opt/ayu-vim"]
-	path = pack/colors/opt/ayu-vim
-	url = git@github.com:ayu-theme/ayu-vim.git
 [submodule "pack/utils/start/vim-fugitive"]
 	path = pack/utils/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "pack/utils/start/fzf.vim"]
-	path = pack/utils/start/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
-[submodule "pack/utils/start/fzf"]
-	path = pack/utils/start/fzf
-	url = git@github.com:junegunn/fzf.git
 [submodule "pack/languages/start/nvim-lspconfig"]
 	path = pack/languages/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
-[submodule "pack/utils/opt/nerdtree"]
-	path = pack/utils/start/nerdtree
-	url = git@github.com:preservim/nerdtree.git
 [submodule "pack/languages/opt/emmet-vim"]
 	path = pack/languages/opt/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
@@ -43,9 +31,12 @@
 [submodule "pack/languages/start/vim-vsnip"]
 	path = pack/languages/start/vim-vsnip
 	url = git@github.com:hrsh7th/vim-vsnip.git
-[submodule "pack/colors/opt/vim-monotone"]
-	path = pack/colors/opt/vim-monotone
-	url = https://github.com/Lokaltog/vim-monotone.git
-[submodule "pack/colors/opt/github-nvim-theme"]
-	path = pack/colors/opt/github-nvim-theme
-	url = git@github.com:projekt0n/github-nvim-theme.git
+[submodule "pack/colors/start/material.nvim"]
+	path = pack/colors/start/material.nvim
+	url = git@github.com:marko-cerovac/material.nvim.git
+[submodule "pack/utils/start/telescope.nvim"]
+	path = pack/utils/start/telescope.nvim
+	url = git@github.com:nvim-telescope/telescope.nvim.git
+[submodule "pack/utils/start/plenary.nvim"]
+	path = pack/utils/start/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim
