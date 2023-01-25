@@ -1,5 +1,5 @@
 syntax enable
-set number relativenumber
+set number
 set mouse=a
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set tabstop=4
@@ -12,9 +12,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-let g:material_style = "darker"
-set background=dark
-colorscheme material
+" let g:material_style = "lighter"
+set background=light
+colorscheme solarized
 
 lua require("config-nvim-tree")
 lua require("my-lsp-config")

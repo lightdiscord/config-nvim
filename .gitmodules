@@ -31,9 +31,6 @@
 [submodule "pack/languages/start/vim-vsnip"]
 	path = pack/everything/start/vim-vsnip
 	url = git@github.com:hrsh7th/vim-vsnip.git
-[submodule "pack/colors/start/material.nvim"]
-	path = pack/everything/start/material.nvim
-	url = git@github.com:marko-cerovac/material.nvim.git
 [submodule "pack/utils/start/telescope.nvim"]
 	path = pack/everything/start/telescope.nvim
 	url = git@github.com:nvim-telescope/telescope.nvim.git
@@ -43,3 +40,9 @@
 [submodule "pack/utils/start/nvim-tree.lua"]
 	path = pack/everything/start/nvim-tree.lua
 	url = git@github.com:kyazdani42/nvim-tree.lua.git
+[submodule "pack/everything/start/solarized.nvim"]
+	path = pack/everything/start/solarized.nvim
+	url = git@github.com:shaunsingh/solarized.nvim.git
+[submodule "pack/everything/start/lualine.nvim"]
+	path = pack/everything/start/lualine.nvim
+	url = git@github.com:nvim-lualine/lualine.nvim.git
