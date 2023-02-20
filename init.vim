@@ -6,15 +6,14 @@ set tabstop=4
 set shiftwidth=4
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
-set hidden
 
 if (has("termguicolors"))
 	set termguicolors
 endif
 
 " let g:material_style = "lighter"
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme github_dark
 
 lua require("config-nvim-tree")
 lua require("my-lsp-config")

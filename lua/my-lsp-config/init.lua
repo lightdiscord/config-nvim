@@ -7,6 +7,10 @@ cmp.setup {
     { name = 'buffer' }
   },
   mapping = {
+	['<S-Tab>'] = cmp.mapping.select_prev_item(),
+	['<up>'] = cmp.mapping.select_prev_item(),
+	['<Tab>'] = cmp.mapping.select_next_item(),
+	['<down>'] = cmp.mapping.select_next_item(),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm()
   },
@@ -24,6 +28,15 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 lspconfig.clangd.setup({ capabilities = capabilities })
 lspconfig.bashls.setup({ capabilities = capabilities })
+lspconfig.tsserver.setup({ capabilities = capabilities })
+lspconfig.volar.setup{
+	capabilities = capabilities,
+	  init_options = {
+    typescript = {
+      tsdk = "/home/user/.npm-global/lib/node_modules/typescript/lib"
+    }
+  }
+}
 
 require"nvim-treesitter.configs".setup {
 	highlight = {

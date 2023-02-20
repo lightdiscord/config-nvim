@@ -46,3 +46,6 @@
 [submodule "pack/everything/start/lualine.nvim"]
 	path = pack/everything/start/lualine.nvim
 	url = git@github.com:nvim-lualine/lualine.nvim.git
+[submodule "pack/everything/start/github-nvim-theme"]
+	path = pack/everything/start/github-nvim-theme
+	url = git@github.com:projekt0n/github-nvim-theme.git
