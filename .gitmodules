@@ -49,3 +49,9 @@
 [submodule "pack/everything/start/github-nvim-theme"]
 	path = pack/everything/start/github-nvim-theme
 	url = git@github.com:projekt0n/github-nvim-theme.git
+[submodule "pack/everything/start/vscode.nvim"]
+	path = pack/everything/start/vscode.nvim
+	url = git@github.com:Mofiqul/vscode.nvim.git
+[submodule "pack/everything/start/telescope-fzf-native.nvim"]
+	path = pack/everything/start/telescope-fzf-native.nvim
+	url = git@github.com:nvim-telescope/telescope-fzf-native.nvim.git

@@ -12,8 +12,10 @@ if (has("termguicolors"))
 endif
 
 " let g:material_style = "lighter"
-set background=dark
-colorscheme github_dark
+" set background=light
+" colorscheme github_light
+" set background=dark
+" colorscheme github_dark_high_contrast
 
 lua require("config-nvim-tree")
 lua require("my-lsp-config")

@@ -26,20 +26,14 @@ cmp.setup {
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig.clangd.setup({ capabilities = capabilities })
-lspconfig.bashls.setup({ capabilities = capabilities })
-lspconfig.tsserver.setup({ capabilities = capabilities })
-lspconfig.volar.setup{
-	capabilities = capabilities,
-	  init_options = {
-    typescript = {
-      tsdk = "/home/user/.npm-global/lib/node_modules/typescript/lib"
-    }
-  }
-}
-
-require"nvim-treesitter.configs".setup {
-	highlight = {
-		enable = true
-	}
-}
+-- lspconfig.jdtls.setup({ cmd = { "/tmp/tmp.4Yo2GDrMMx/bin/jdtls" }, capabilities = capabilities })
+-- lspconfig.bashls.setup({ capabilities = capabilities })
+-- lspconfig.tsserver.setup({ capabilities = capabilities })
+-- lspconfig.volar.setup{
+-- 	capabilities = capabilities,
+-- 	  init_options = {
+--     typescript = {
+--       tsdk = "/home/user/.npm-global/lib/node_modules/typescript/lib"
+--     }
+--   }
+-- }

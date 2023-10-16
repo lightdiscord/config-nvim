@@ -1,15 +1,50 @@
+vim.o.background = 'dark'
+-- For light theme
+-- vim.o.background = 'light'
+
+local c = require('vscode.colors').get_colors()
+require('vscode').setup({
+    -- Alternatively set style in setup
+    -- style = 'light'
+
+    -- Enable transparent background
+    transparent = true,
+
+    -- Enable italic comment
+    italic_comments = true,
+
+    -- Disable nvim-tree background color
+    disable_nvimtree_bg = true,
+
+    -- Override colors (see ./lua/vscode/colors.lua)
+    color_overrides = {
+        vscLineNumber = '#FFFFFF',
+    },
+
+    -- Override highlight groups (see ./lua/vscode/theme.lua)
+    group_overrides = {
+        -- this supports the same val table as vim.api.nvim_set_hl
+        -- use colors from this colorscheme by requiring vscode.colors!
+        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+    }
+})
+require('vscode').load()
+
+require'nvim-web-devicons'.setup {}
+
 require("nvim-tree").setup {
---	renderer = {
---		icons = {
---			show = {
---				file = false,
---				folder = false,
---				git = false,
---				folder_arrow = false,
---				modified = false,
---			}
---		}
---	}
+	renderer = {
+		group_empty = true,
+		icons = {
+			show = {
+				file = true,
+				folder = true,
+				git = false,
+				folder_arrow = false,
+				modified = false,
+			}
+		}
+	}
 }
 
 require "telescope".setup {
@@ -17,15 +52,24 @@ require "telescope".setup {
     colorscheme = {
       enable_preview = true
     }
+  },
+  extensions = {
+	fzf = {
+		fuzzy = true,
+		override_generic_sorter = true,
+		override_file_sorter = true
+	}
   }
 }
+
+require "telescope".load_extension("fzf")
 
 require('lualine').setup {
 	options = { section_separators = '', component_separators = '' }
 }
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "json", "vue", "javascript", "typescript", "c", "lua", "vim", "help" },
+  ensure_installed = "all",
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
